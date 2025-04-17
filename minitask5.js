@@ -1,7 +1,8 @@
 const mainFunction = (c, type, cb1, cb2) => {
-    cb1(c)
-    if (c) {
+    if (cb1(c)) {
         return cb2(c, type)
+    } else {
+        console.log("Suhu yang dimasukkan bukan berupa angka")
     }
 }
 
@@ -16,12 +17,21 @@ const typeChecker = (c, type) => {
             break;
         case "k":
             console.log(`Hasil konversi: ${result = c + 273}`)
+            break;
     }
 }
 
 mainFunction(50, "f", function(c) {
     if (typeof c != "number") {
-        return 
+        return null
+    } else {
+        return c
+    }
+}, typeChecker)
+
+mainFunction("x", "f", function(c) {
+    if (typeof c != "number") {
+        return null
     } else {
         return c
     }
