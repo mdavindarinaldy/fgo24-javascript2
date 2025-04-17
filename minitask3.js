@@ -1,19 +1,25 @@
-const obj = {
+const Celcius = {
     fahrenheit: function(C) {
-        console.log("Fahrenheit: "+((9/5*C)+32))
+        return (9/5*C)+32
     },
     reamur: function(C) {
-        console.log("Reamur: "+(4/5*C))
+        return 4/5*C
     },
     kelvin: function(C) {
-        console.log("Kelvin: "+(C+273.15))
+        return C+273.15
     },
-    konversi: function(C) {
+    convert: function(C) {
+        let F = 0
+        let K = 0
+        let R = 0
         console.log("Celcius: "+C)
-        this.fahrenheit(C)
-        this.kelvin(C)
-        this.reamur(C)
+        F = this.fahrenheit(C)
+        K = this.kelvin(C)
+        R = this.reamur(C)
+        console.log("Fahrenheit: "+F)
+        console.log("Reamur: "+R)
+        console.log("Kelvin: "+K)
     }
 }
 
-obj.konversi(100)
+Celcius.convert(100)
