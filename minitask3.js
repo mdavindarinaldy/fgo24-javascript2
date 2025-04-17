@@ -12,10 +12,10 @@ const celcius = {
         let F = 0
         let K = 0
         let R = 0
-        console.log("Celcius: "+C)
         F = this.fahrenheit(C)
         K = this.kelvin(C)
         R = this.reamur(C)
+        console.log("Celcius: "+C)
         console.log("Fahrenheit: "+F)
         console.log("Reamur: "+R)
         console.log("Kelvin: "+K)
