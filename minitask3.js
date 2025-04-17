@@ -1,4 +1,4 @@
-const Celcius = {
+const celcius = {
     fahrenheit: function(C) {
         return (9/5*C)+32
     },
@@ -22,4 +22,4 @@ const Celcius = {
     }
 }
 
-Celcius.convert(100)
+celcius.convert(100)
