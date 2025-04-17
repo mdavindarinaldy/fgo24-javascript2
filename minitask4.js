@@ -3,10 +3,14 @@ const mainFunction = (x1, cb) => {
 }
 
 const oddEven = (y1) => {
-    if (y1 % 2 == 0) {
-        return "genap"
-    } else if (y1 % 2 != 0) {
-        return "ganjil"
+    if (y1 > 0) {
+        if (y1 % 2 == 0) {
+            return "genap"
+        } else if (y1 % 2 != 0) {
+            return "ganjil"
+        } 
+    } else {
+        return
     }
 }
 
